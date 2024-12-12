@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+}
+
+form > input {
+    background-color: aliceblue;
+    font-size: 1rem;
+    height: 1.4rem;
+    border: 1px navy solid;
+    border-radius: 1rem;
+}
+
+#library {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+}
+
+.book-card {
+    background-color: #27c2f1;
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    padding: auto;
+    text-align: center;
+}
+
+button {
+    background-color: #27c2f1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 2rem;
+    padding: 0 1rem;
+    color: navy;
+    border: 2px black solid;
+    border-radius: 1rem;
+}
