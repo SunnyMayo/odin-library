@@ -2,6 +2,7 @@
 
 const library = document.querySelector("#library");
 const addNewBook = document.getElementById("add-btn");
+const refreshBtn = document.getElementById("refresh");
 const dialog = document.getElementById("add-dialog");
 const confirmBtn = dialog.querySelector("#submit-new");
 const cancelBtn = dialog.querySelector("#cancel-new");
@@ -43,7 +44,12 @@ function displayBook(book) {
     title.className = "title";
     author.className = "author";
     specs.className = "specs";
-    read.className = "read-status";
+    read.className = "status";
+
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(specs);
+    card.appendChild(read);
 
     title.innerHTML = book.title;
     author.innerHTML = book.author;
@@ -57,26 +63,21 @@ function displayBook(book) {
     genre.innerHTML = `Genre: ${book.genre}`;
 
     if (book.read === true) {
-        read.className = 'read';
-        read.textContent = 'Read'
+        read.classList.add('read');
+        read.textContent = 'Read';
+    } else {
+        read.textContent = 'Unread';
     };
 
-
-    const readBtn = document.querySelector(".read-status");
-    readBtn.addEventListener("click", () => {
-        if (readBtn.textContent === 'Read') {
-            readBtn.textContent = 'Unread';
+    read.addEventListener("click", () => {
+        if (read.textContent === 'Read') {
+            read.textContent = 'Unread';
         } else {
-            readBtn.textContent = 'Read';
+            read.textContent = 'Read';
         };
 
-        readBtn.classList.toggle('read');
+        read.classList.toggle('read');
     });
-
-    card.appendChild(title);
-    card.appendChild(author);
-    card.appendChild(specs);
-    card.appendChild(read);
 };
 
 /* Show dialog box */

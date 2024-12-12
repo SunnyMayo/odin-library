@@ -11,7 +11,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     background-color: #644101;
@@ -37,7 +37,8 @@ dialog {
     border: none;
     border-radius: 1rem;
     padding: 1.5rem;
-    
+    align-self: center;
+    justify-self: center;
 }
 
 form {
@@ -54,8 +55,10 @@ form > input {
     font-size: 1rem;
     height: 1.4rem;
     border: 1px navy solid;
-    border-radius: 1rem;
+    border-radius: .8rem;
+    padding-left: 1rem;
 }
+
 
 form > button {
     margin: 1rem;
@@ -101,7 +104,7 @@ li {
     list-style-type: none;
 }
 
-button.read-status {
+button.status {
     font-size: 1rem;
     background-color: rgb(253, 123, 123);
     cursor: pointer;
