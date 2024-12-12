@@ -45,11 +45,6 @@ function displayBook(book) {
     specs.className = "specs";
     read.className = "read-status";
 
-    card.appendChild(title);
-    card.appendChild(author);
-    card.appendChild(specs);
-    card.appendChild(read);
-
     title.innerHTML = book.title;
     author.innerHTML = book.author;
 
@@ -63,6 +58,7 @@ function displayBook(book) {
 
     if (book.read === true) {
         read.className = 'read';
+        read.textContent = 'Read'
     };
 
 
@@ -72,10 +68,15 @@ function displayBook(book) {
             readBtn.textContent = 'Unread';
         } else {
             readBtn.textContent = 'Read';
-        }
+        };
 
         readBtn.classList.toggle('read');
     });
+
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(specs);
+    card.appendChild(read);
 };
 
 /* Show dialog box */
@@ -101,7 +102,7 @@ cancelBtn.addEventListener("click", () => {
 });
 
 /* confirm button adds new book to library */
-confirmBtn.addEventListener("click", function() {
+confirmBtn.addEventListener("click", () => {
     const title = dialog.querySelector("#title").value;
     const author = dialog.querySelector("#author").value;
     const pages = dialog.querySelector("#pages").value;

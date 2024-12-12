@@ -14,8 +14,13 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: #644101;
+    color: rgb(219, 255, 255);
 }
 
+h1 {
+    margin: 2rem;
+}
 
 button {
     background-color: #27c2f1;
@@ -26,6 +31,13 @@ button {
     color: navy;
     border: 2px black solid;
     border-radius: 1rem;
+}
+
+dialog {
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    
 }
 
 form {
@@ -43,6 +55,10 @@ form > input {
     height: 1.4rem;
     border: 1px navy solid;
     border-radius: 1rem;
+}
+
+form > button {
+    margin: 1rem;
 }
 
 #library {
@@ -88,6 +104,7 @@ li {
 button.read-status {
     font-size: 1rem;
     background-color: rgb(253, 123, 123);
+    cursor: pointer;
 }
 
 button.read {
