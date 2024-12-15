@@ -15,10 +15,10 @@ const myLibrary = [];
 
 function Book(title, author, pages, genre, read) {
     this.id = myLibrary.length + 1
-    this.title = (title, 'Unknown');
-    this.author = (author, 'Unknown');
-    this.pages = (pages, 'N/A');
-    this.genre = (genre, 'Unspecified');
+    this.title = (title);
+    this.author = (author);
+    this.pages = (pages);
+    this.genre = (genre);
     this.read = read;
 };
 
