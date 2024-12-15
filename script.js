@@ -33,6 +33,7 @@ function addBookToLibrary(book) {
 
 function displayBook(book) {
     const card = document.createElement("div");
+    const id = document.createElement("h4");
     const title = document.createElement("h2");
     const author = document.createElement("h3");
     const specs = document.createElement("ul");
@@ -41,16 +42,19 @@ function displayBook(book) {
     card.className = "book-card";
     library.appendChild(card);
 
+    id.className = "id";
     title.className = "title";
     author.className = "author";
     specs.className = "specs";
     read.className = "status";
 
+    card.appendChild(id);
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(specs);
     card.appendChild(read);
 
+    id.innerHTML = `Book number: ${book.id}`;
     title.innerHTML = book.title;
     author.innerHTML = book.author;
 
